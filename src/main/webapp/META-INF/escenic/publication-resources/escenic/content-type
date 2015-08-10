@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<content-types xmlns="http://xmlns.escenic.com/2008/content-type"
+               xmlns:ui="http://xmlns.escenic.com/2008/interface-hints"
+               version="4">
+
+  <content-type name="story">
+    <ui:title-field>title</ui:title-field>
+
+    <panel name="main">
+      <field mime-type="text/plain" type="basic" name="title">
+        <constraints>
+          <required>true</required>
+        </constraints>
+      </field>
+    </panel>
+  </content-type>
+
+</content-types>

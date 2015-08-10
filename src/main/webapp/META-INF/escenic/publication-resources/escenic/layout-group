@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<groups xmlns="http://xmlns.escenic.com/2008/layout-group"
+        xmlns:ct="http://xmlns.escenic.com/2008/content-type"
+        xmlns:ui="http://xmlns.escenic.com/2008/interface-hints">
+
+  <group name="root-group" root="true">
+    <area name="header"/>
+    <area name="left"/>
+    <area name="right"/>
+  </group>
+
+  <group name="two-col">
+    <area name="left"/>
+    <area name="right"/>
+  </group>
+
+  <group name="three-col">
+    <area name="left"/>
+    <area name="center"/>
+    <area name="right"/>
+  </group>
+</groups>
