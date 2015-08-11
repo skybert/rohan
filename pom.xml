@@ -8,13 +8,18 @@
   <artifactId>rohan</artifactId>
   <packaging>war</packaging>
   <version>0.1</version>
-
   <dependencies>
     <dependency>
       <groupId>com.escenic.engine</groupId>
       <artifactId>engine-presentation</artifactId>
-      <version>trunk-SNAPSHOT</version>
+      <version>5.7-SNAPSHOT</version>
+      <scope> provided </scope>
+    </dependency>
+    <dependency>
+      <groupId>com.escenic.common</groupId>
+      <artifactId>common-util</artifactId>
+      <version>1.9-SNAPSHOT</version>
+      <scope> provided </scope>
     </dependency>
   </dependencies>
-
 </project>

@@ -3,10 +3,18 @@
         xmlns:ct="http://xmlns.escenic.com/2008/content-type"
         xmlns:ui="http://xmlns.escenic.com/2008/interface-hints">
 
-  <group name="root-group" root="true">
-    <area name="header"/>
-    <area name="left"/>
-    <area name="right"/>
+  <group name="root" root="true">
+    <area name="header">
+      <ref-group name="two-col"/>
+    </area>
+    <area name="main">
+      <ref-group name="two-col"/>
+      <ref-group name="three-col"/>
+    </area>
+    <area name="footer">
+      <ref-group name="two-col"/>
+      <ref-group name="three-col"/>
+    </area>
   </group>
 
   <group name="two-col">

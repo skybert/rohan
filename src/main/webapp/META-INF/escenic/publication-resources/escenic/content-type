@@ -5,13 +5,13 @@
 
   <content-type name="story">
     <ui:title-field>title</ui:title-field>
-
     <panel name="main">
       <field mime-type="text/plain" type="basic" name="title">
         <constraints>
           <required>true</required>
         </constraints>
       </field>
+      <field mime-type="application/xhtml+xml" type="basic" name="body"/>
     </panel>
   </content-type>
 
