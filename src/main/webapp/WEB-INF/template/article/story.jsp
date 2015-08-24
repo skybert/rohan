@@ -1,8 +1,9 @@
-<pre>
-article title=${article.title}
-article body=${article.fields["body"]}
-</pre>
+<h3>
+  title=[${article.title}]
+</h3>
+
+body=[${article.fields["body"]}]
 
 <p>
-  <a href="${article.url}">Read more here: ${article.url}</a>
+  <a href="${article.url}">${article.url}</a>
 </p>

@@ -4,10 +4,10 @@
 <%@ taglib uri="http://www.escenic.com/taglib/escenic-section" prefix="section" %>
 <%@ taglib uri="http://www.escenic.com/taglib/escenic-view" prefix="view" %>
 <h2>Section: ${section.name}</h2>
-<h3>
-  Menu
-</h3>
 <div id="menu">
+  <h3>
+    Menu
+  </h3>
   <bean:define id="rootSection" name="publication" property="rootSection" type="neo.xredsys.api.Section"/>
   <section:recursiveView id="secView" name="rootSection" depth="2"/>
   <c:url var="arrow" value="/gfx/arrow.gif" scope="request"/>

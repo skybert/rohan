@@ -4,7 +4,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
-    <c:url var="css" value="/css/main.css" scope="request"/>
+    <link rel="stylesheet" type="text/css"
+          href="http://skybert.net/theme/styles/skybert.css" />
+    <style type="text/css">
+      #menu { float: right; }
+    </style>
     <title>
       Publication: ${publication.name}
       <c:if test="${requestScope['com.escenic.context']=='art'}">
