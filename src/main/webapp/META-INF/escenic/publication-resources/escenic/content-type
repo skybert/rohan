@@ -15,4 +15,49 @@
     </panel>
   </content-type>
 
+  <content-type name="image">
+    <ui:label>Image</ui:label>
+    <ui:icon>image</ui:icon>
+    <ui:title-field>name</ui:title-field>
+    <panel name="main">
+      <ui:label>Image content</ui:label>
+      <field mime-type="text/plain" type="basic" name="name">
+        <constraints>
+          <required>true</required>
+        </constraints>
+      </field>
+      <field mime-type="text/plain" type="basic" name="description"/>
+      <field mime-type="text/plain" type="basic" name="alt-text"/>
+      <field name="binary" type="link">
+        <relation>com.escenic.edit-media</relation>
+        <constraints>
+          <mime-type>image/jpeg</mime-type>
+          <mime-type>image/png</mime-type>
+        </constraints>
+      </field>
+    </panel>
+    <panel name="crop">
+      <ui:label>Crop</ui:label>
+      <field name="alternates" type="basic" mime-type="application/json">
+        <representations xmlns="http://xmlns.escenic.com/2009/representations" type="image-versions">
+          <!-- A minimal version definition, with cropping and resizing -->
+          <representation name="wide-big">
+            <output width="572" height="204"/> <!-- The target size of the version -->
+            <crop/> <!-- Crop masks are derived from the target size -->
+            <resize/> <!-- Resized automatically; to the width/height seen above -->
+          </representation>
+          <representation name="small-square">
+            <output width="150" height="150"/> <!-- Target size of the version -->
+            <crop/> <!-- Crop masks are derived from the target size -->
+            <resize/> <!-- Resized automatically; to the width/height seen above -->
+          </representation>
+        </representations>
+      </field>
+    </panel>
+    <summary>
+      <ui:label>Content Summary</ui:label>
+      <field name="caption" type="basic" mime-type="text/plain"/>
+      <field name="alt-text" type="basic" mime-type="text/plain"/>
+    </summary>
+  </content-type>
 </content-types>
