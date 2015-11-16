@@ -1,5 +1,6 @@
 <%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.escenic.com/taglib/escenic-article" prefix="article" %>
 
 <h3>Root group</h3>
 
@@ -24,3 +25,15 @@
   <c:set var="element" value="${item}" scope="request"/>
   <jsp:include page="${item.type}.jsp"/>
 </c:forEach>
+
+<h4>
+  Article list items (in current section)
+</h4>
+<article:list id="myArticleList" />
+<ol>
+  <c:forEach items="${myArticleList}" var="item">
+    <li>
+      ${item.title}
+    </li>
+  </c:forEach>
+</ol>
