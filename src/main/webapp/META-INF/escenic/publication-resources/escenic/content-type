@@ -1,20 +1,61 @@
 <?xml version="1.0"?>
-<content-types xmlns="http://xmlns.escenic.com/2008/content-type"
-               xmlns:ui="http://xmlns.escenic.com/2008/interface-hints"
-               version="4">
+<content-types
+  version="4"
+  xmlns:ui="http://xmlns.escenic.com/2008/interface-hints"
+  xmlns="http://xmlns.escenic.com/2008/content-type"
+  >
+
+  <relation-type-group name="images">
+    <relation-type name="images">
+      <ui:label>Images</ui:label>
+    </relation-type>
+  </relation-type-group>
+
+  <relation-type-group name="stories">
+    <relation-type name="stories">
+      <ui:label>Related stories</ui:label>
+    </relation-type>
+  </relation-type-group>
 
   <content-type name="story">
     <ui:title-field>title</ui:title-field>
+    <!--
+        <ui:decorator name="failingDecorator" fail-on-error="true"/>
+        <ui:decorator name="doesNotExistDecorator" fail-on-error="true"/>
+    -->
+    <ui:tag-scheme>tag:person@example.com,2011</ui:tag-scheme>
+    <ui:tag-scheme>tag:organization@example.com,2011</ui:tag-scheme>
+    <ui:tag-scheme>tag:language@example.com,2015</ui:tag-scheme>
+    <ui:tag-scheme>tag:entity@example.com,2015</ui:tag-scheme>
+    <ui:tag-scheme>tag:location@example.com,2011</ui:tag-scheme>
+
     <panel name="main">
       <field mime-type="text/plain" type="basic" name="title">
         <constraints>
           <required>true</required>
         </constraints>
       </field>
-      <field mime-type="application/xhtml+xml" type="basic" name="body"/>
+      <field type="enumeration" name="skipLoadingOn" multiple="true">
+        <ui:label>Skip on device</ui:label>
+        <enumeration value="large">
+          <ui:label>Large</ui:label>
+        </enumeration>
+        <enumeration value="medium">
+          <ui:label>Medium</ui:label>
+        </enumeration>
+        <enumeration value="small">
+          <ui:label>Small</ui:label>
+        </enumeration>
+      </field>
     </panel>
+    <ref-relation-type-group name="images"/>
+    <ref-relation-type-group name="stories"/>
+    <summary>
+      <field name="title" type="basic" mime-type="text/plain"/>
+      <field name="foo" type="basic" mime-type="text/plain"/>
+      <ref-relation-type-group name="images"/>
+    </summary>
   </content-type>
-
   <content-type name="image">
     <ui:label>Image</ui:label>
     <ui:icon>image</ui:icon>
