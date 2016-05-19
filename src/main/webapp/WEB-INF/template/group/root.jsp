@@ -33,7 +33,7 @@
 <ol>
   <c:forEach items="${myArticleList}" var="item">
     <li>
-      ${item.title}
+      <a href="${item.url}">${item.title}</a> ${item.id}
     </li>
   </c:forEach>
 </ol>
