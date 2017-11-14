@@ -3,7 +3,9 @@
 </h3>
 
 <pre>
-description=[${article.fields["description"]}]
+
+description      =[${article.fields["description"]}]
+article.url      =${article.url}
 binary.value.href=${article.fields.binary.value.href}
 </pre>
 
