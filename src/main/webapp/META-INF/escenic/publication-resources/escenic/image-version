@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<imageDef xmlns="http://xmlns.escenic.com/2008/image-versions">
+  <originalVersion id="original">
+    <label>Original</label>
+  </originalVersion>
+
+  <version id="thumbnail">
+    <label>Thumbnail</label>
+    <maxWidth pix="75"/>
+    <maxHeight pix="75"/>
+    <format name="jpg" />
+  </version>
+
+  <version id="big">
+    <label>Big</label>
+    <maxHeight pix="100"/>
+    <fallback operation="skip"/>
+    <format name="jpeg" quality="0.75"/>
+  </version>
+
+</imageDef>
