@@ -9,8 +9,16 @@ article.url      =${article.url}
 binary.value.href=${article.fields.binary.value.href}
 </pre>
 
+<h4>Original</h4>
 <img
   src="${article.fields.binary.value.href}"
+  alt="${article.fields.description}"
+  title="${article.title}"
+  />
+
+<h4>Versions</h4>
+<img
+  src="${article.fields.alternates.value["wide-big"].href}"
   alt="${article.fields.description}"
   title="${article.title}"
 />
